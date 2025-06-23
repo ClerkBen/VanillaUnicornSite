@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanilla Unicorn | Gallery</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: #fff8f0;
+      color: #2a1a38;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    nav {
+      background: #2a1a38;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    nav .container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+    nav .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+      color: #ff2d86;
+      letter-spacing: 2px;
+      text-shadow: 0 0 6px #ff59ab;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+    nav ul li a {
+      font-size: 1rem;
+      color: #fff;
+      text-decoration: none;
+    }
+    nav ul li a:hover,
+    nav ul li a[aria-current="page"] {
+      color: #ff59ab;
+      text-shadow: 0 0 5px #ff59ab;
+    }
+
+    header.page-header {
+      max-width: 1100px;
+      margin: 3rem auto 2rem;
+      padding: 0 1.5rem;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #ff2d86;
+      text-shadow: 0 0 7px #ff59ab;
+    }
+
+    main.gallery-container {
+      max-width: 1100px;
+      margin: auto 1.5rem 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    figure {
+      position: relative;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(42, 26, 56, 0.15);
+      cursor: pointer;
+      background: #fff;
+      transition: transform 0.3s ease;
+    }
+    figure:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(255, 45, 134, 0.6);
+      z-index: 10;
+    }
+    figure img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 15px;
+      transition: filter 0.3s ease;
+    }
+    figure:hover img {
+      filter: brightness(1.1);
+    }
+    figcaption {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(transparent, rgba(42, 26, 56, 0.85));
+      color: #fff;
+      padding: 0.75rem 1rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      border-radius: 0 0 15px 15px;
+      text-align: center;
+      letter-spacing: 1.2px;
+      user-select: none;
+    }
+
+    footer {
+      background: #2a1a38;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      box-shadow: inset 0 3px 10px rgba(255, 45, 134, 0.6);
+      margin-top: auto;
+    }
+
+    @media (max-width: 480px) {
+      header.page-header {
+        font-size: 2.4rem;
+      }
+      main.gallery-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">Vanilla Unicorn</div>
+      <ul>
+        <li><a href="VanillaUnicorn_Home.html">Home</a></li>
+        <li><a href="VanillaUnicorn_Menu.html">Menu</a></li>
+        <li><a href="VanillaUnicorn_Events.html">Events</a></li>
+        <li><a href="VanillaUnicorn_About.html">About</a></li>
+        <li><a href="VanillaUnicorn_Booking.html">Booking</a></li>
+        <li><a href="VanillaUnicorn_Gallery.html" aria-current="page">Gallery</a></li>
+        <li><a href="VanillaUnicorn_Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header" role="heading" aria-level="1">
+    Vanilla Unicorn Moments
+  </header>
+
+  <main class="gallery-container" role="main" aria-label="Photo gallery of Vanilla Unicorn strip club">
+    <!-- Replace these images with your own club/event photos -->
+    <figure>
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=600&q=80" alt="Dancer performing on stage" />
+      <figcaption>Electrifying Stage Show</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1514972304320-c54d5a35cc8e?auto=format&fit=crop&w=600&q=80" alt="Close-up of a cocktail with neon lights" />
+      <figcaption>Signature Cocktails</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80" alt="VIP lounge seating with mood lighting" />
+      <figcaption>VIP Lounge</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Dancers dancing with colorful lights" />
+      <figcaption>Colorful Dance Floor</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=600&q=80" alt="DJ spinning music at the club" />
+      <figcaption>Hot DJ Sets</figcaption>
+    </figure>
+    <figure>
+      <img src="https://images.unsplash.com/photo-1523991174336-cc796ad4fbc3?auto=format&fit=crop&w=600&q=80" alt="Cocktail glasses lined up on the bar" />
+      <figcaption>Bar Vibes</figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    &copy; 2025 Vanilla Unicorn &mdash; All Rights Reserved &mdash; Must be 21+ to enter.
+  </footer>
+</body>
+</html>

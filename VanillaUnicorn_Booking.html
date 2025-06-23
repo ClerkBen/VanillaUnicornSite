@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanilla Unicorn | Booking</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: #fff8f0;
+      color: #2a1a38;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+    a {
+      color: #ff2d86;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ff59ab;
+    }
+
+    nav {
+      background: #2a1a38;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    nav .container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+    nav .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+      color: #ff2d86;
+      letter-spacing: 2px;
+      text-shadow: 0 0 6px #ff59ab;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+    nav ul li a {
+      font-size: 1rem;
+      color: #fff;
+    }
+    nav ul li a:hover,
+    nav ul li a[aria-current="page"] {
+      color: #ff59ab;
+      text-shadow: 0 0 5px #ff59ab;
+    }
+
+    header.page-header {
+      max-width: 1100px;
+      margin: 3rem auto 2rem;
+      padding: 0 1.5rem;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #ff2d86;
+      text-shadow: 0 0 7px #ff59ab;
+    }
+
+    main.booking-container {
+      max-width: 600px;
+      margin: auto 1.5rem 4rem;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 4px 15px rgba(42, 26, 56, 0.15);
+      padding: 2rem 2.5rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    label {
+      font-weight: 600;
+      color: #2a1a38;
+      margin-bottom: 0.3rem;
+      display: block;
+    }
+
+    input, select, textarea {
+      padding: 0.7rem 1rem;
+      font-size: 1rem;
+      border: 2px solid #ff2d86;
+      border-radius: 8px;
+      outline-offset: 2px;
+      transition: border-color 0.3s ease;
+      resize: vertical;
+      font-family: 'Montserrat', sans-serif;
+      color: #2a1a38;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: #ff59ab;
+      outline: none;
+      box-shadow: 0 0 8px #ff59ab;
+    }
+
+    textarea {
+      min-height: 100px;
+    }
+
+    button {
+      background: #ff2d86;
+      color: #fff;
+      font-family: 'Pacifico', cursive;
+      font-size: 1.3rem;
+      padding: 1rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 12px rgba(255, 45, 134, 0.6);
+    }
+    button:hover {
+      background: #ff59ab;
+      box-shadow: 0 6px 18px rgba(255, 89, 171, 0.8);
+    }
+
+    footer {
+      background: #2a1a38;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      box-shadow: inset 0 3px 10px rgba(255, 45, 134, 0.6);
+      margin-top: auto;
+    }
+
+    @media (max-width: 480px) {
+      header.page-header {
+        font-size: 2.4rem;
+      }
+      main.booking-container {
+        padding: 1.5rem 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">Vanilla Unicorn</div>
+      <ul>
+        <li><a href="VanillaUnicorn_Home.html">Home</a></li>
+        <li><a href="VanillaUnicorn_Menu.html">Menu</a></li>
+        <li><a href="VanillaUnicorn_Events.html">Events</a></li>
+        <li><a href="VanillaUnicorn_About.html">About</a></li>
+        <li><a href="VanillaUnicorn_Booking.html" aria-current="page">Booking</a></li>
+        <li><a href="VanillaUnicorn_Gallery.html">Gallery</a></li>
+        <li><a href="VanillaUnicorn_Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header" role="heading" aria-level="1">
+    Book Your Event at Vanilla Unicorn
+  </header>
+
+  <main class="booking-container" role="main">
+    <form id="bookingForm" action="https://formspree.io/f/manjplab" method="POST">
+      <input type="hidden" name="_replyto" value="xxapollo2016xx@gmail.com" />
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required />
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required />
+
+      <label for="phone">Phone Number *</label>
+      <input type="tel" id="phone" name="phone" placeholder="(123) 456-7890" pattern="^\+?[\d\s\-]{7,15}$" required />
+
+      <label for="eventType">Type of Event *</label>
+      <select id="eventType" name="eventType" required>
+        <option value="" disabled selected>Select an event type</option>
+        <option value="Private Party">Private Party</option>
+        <option value="Corporate Event">Corporate Event</option>
+        <option value="Birthday">Birthday</option>
+        <option value="Bachelor/Bachelorette">Bachelor/Bachelorette</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <label for="eventDate">Preferred Date *</label>
+      <input type="date" id="eventDate" name="eventDate" required min="" />
+
+      <label for="guestCount">Estimated Number of Guests *</label>
+      <input type="number" id="guestCount" name="guestCount" min="1" max="500" placeholder="e.g., 50" required />
+
+      <label for="details">Additional Details / Requests</label>
+      <textarea id="details" name="details" placeholder="Anything else you'd like us to know..."></textarea>
+
+      <button type="submit">Submit Booking Request</button>
+    </form>
+  </main>
+
+  <footer>
+    &copy; 2025 Vanilla Unicorn &mdash; All Rights Reserved &mdash; Must be 21+ to enter.
+  </footer>
+
+  <script>
+    // Set min date of date input to today
+    const dateInput = document.getElementById('eventDate');
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+
+    // Simple form validation (you can expand or add backend later)
+    document.getElementById('bookingForm').addEventListener('submit', function(event) {
+      if (!this.checkValidity()) {
+        event.preventDefault();
+        alert('Please fill out all required fields correctly before submitting.');
+      } else {
+        alert('Thank you! Your booking request has been submitted.');
+        // You can replace this alert with actual form submission logic
+        event.preventDefault(); // Remove this line when you have backend to submit to
+        this.reset();
+      }
+    });
+  </script>
+</body>
+</html>

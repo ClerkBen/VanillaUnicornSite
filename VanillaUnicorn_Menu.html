@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanilla Unicorn | Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: #fff8f0;
+      color: #2a1a38;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    a {
+      text-decoration: none;
+      color: #ff2d86;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ff59ab;
+    }
+
+    /* Navigation - same as home */
+    nav {
+      background: #2a1a38;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    nav .container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+    nav .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+      color: #ff2d86;
+      letter-spacing: 2px;
+      text-shadow: 0 0 6px #ff59ab;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+    nav ul li a {
+      font-size: 1rem;
+      color: #fff;
+    }
+    nav ul li a:hover {
+      color: #ff59ab;
+      text-shadow: 0 0 5px #ff59ab;
+    }
+
+    /* Page Title */
+    header.page-header {
+      max-width: 1100px;
+      margin: 3rem auto 1.5rem;
+      padding: 0 1.5rem;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #ff2d86;
+      text-shadow: 0 0 7px #ff59ab;
+    }
+
+    /* Menu sections */
+    .menu-container {
+      max-width: 1100px;
+      margin: auto 1.5rem 4rem;
+    }
+    section.menu-category {
+      margin-bottom: 3rem;
+    }
+    section.menu-category h2 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2.4rem;
+      color: #2a1a38;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ff59ab;
+      padding-bottom: 0.5rem;
+      text-shadow: 0 0 3px #ff59ab;
+    }
+
+    /* Menu items */
+    ul.menu-items {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.7rem;
+    }
+    ul.menu-items li {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(42, 26, 56, 0.15);
+      padding: 1.2rem 1.5rem;
+      transition: box-shadow 0.3s ease;
+      cursor: default;
+    }
+    ul.menu-items li:hover {
+      box-shadow: 0 6px 18px rgba(255, 45, 134, 0.5);
+    }
+    ul.menu-items li h3 {
+      font-family: 'Pacifico', cursive;
+      color: #ff2d86;
+      margin-bottom: 0.3rem;
+      font-size: 1.5rem;
+      text-shadow: 0 0 5px #ff59ab;
+    }
+    ul.menu-items li p {
+      font-weight: 500;
+      color: #6e5970;
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #2a1a38;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      box-shadow: inset 0 3px 10px rgba(255, 45, 134, 0.6);
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      ul.menu-items {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">Vanilla Unicorn</div>
+      <ul>
+        <li><a href="VanillaUnicorn_Home.html">Home</a></li>
+        <li><a href="VanillaUnicorn_Menu.html" aria-current="page">Menu</a></li>
+        <li><a href="VanillaUnicorn_Events.html">Events</a></li>
+        <li><a href="VanillaUnicorn_About.html">About</a></li>
+        <li><a href="VanillaUnicorn_Booking.html">Booking</a></li>
+        <li><a href="VanillaUnicorn_Gallery.html">Gallery</a></li>
+        <li><a href="VanillaUnicorn_Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header" role="heading" aria-level="1">
+    Vanilla Unicorn’s Erotic Summer Menu
+  </header>
+
+  <main class="menu-container" role="main">
+    <section class="menu-category" aria-labelledby="sodas-title">
+      <h2 id="sodas-title">🥤 Naughty Soda Menu (Non-Alcoholic)</h2>
+      <ul class="menu-items">
+        <li>
+          <h3>🍒 Cherry Tease Fizz</h3>
+          <p>Cherry soda with whipped cream and a drizzle of cherry syrup — served with two cherries on top... naturally.</p>
+        </li>
+        <li>
+          <h3>🦄 Unicorn Cream Dream</h3>
+          <p>Vanilla cream soda over ice, topped with rainbow sprinkles and a swirl of cotton candy.</p>
+        </li>
+        <li>
+          <h3>🍑 Wet Peach Pop</h3>
+          <p>Sparkling peach soda with peach rings and a splash of lemonade. Sweet, juicy, and oh-so-drinkable.</p>
+        </li>
+        <li>
+          <h3>💋 Lip Service Lemonade</h3>
+          <p>Pink lemonade soda with a kiss of strawberry syrup and heart-shaped ice cubes.</p>
+        </li>
+        <li>
+          <h3>🍓 Strawberry Striptease</h3>
+          <p>Strawberry soda with real fruit slices, a sugar rim, and a suggestive candy stir stick.</p>
+        </li>
+        <li>
+          <h3>🫧 Dirty Blonde Bubbles</h3>
+          <p>Butterscotch or vanilla soda served ice-cold with a golden glow and creamy finish.</p>
+        </li>
+        <li>
+          <h3>🌈 Bottomless Bliss Float</h3>
+          <p>Build-your-own soda float: choice of soda base (cola, root beer, orange, etc.) with ice cream and naughty topping options (whipped cream, chocolate drizzle, edible glitter).</p>
+        </li>
+        <li>
+          <h3>💦 Blue Balls Blast</h3>
+          <p>Bright blue raspberry soda with blueberry bobas and rock candy rim — served with a wink and a straw.</p>
+        </li>
+        <li>
+          <h3>🍭 Candy Licker Pop</h3>
+          <p>A fizzy, sweet grape or bubblegum soda served with a giant lollipop in the glass.</p>
+        </li>
+        <li>
+          <h3>🍹 The Flirtini (Virgin Style)</h3>
+          <p>Mocktail-inspired soda with citrus soda, pineapple juice, and a splash of grenadine — sexy without the spirits.</p>
+        </li>
+        <li>
+          <h3>🐶 Good Boy</h3>
+          <p>Layered cola and cream soda with a hint of vanilla, topped with whipped cream and a cherry — obediently delicious.</p>
+        </li>
+        <li>
+          <h3>👑 Good Girl</h3>
+          <p>Light sparkling water with cucumber and mint syrup, finished with a splash of elderflower and a delicate rose petal.</p>
+        </li>
+        <li>
+          <h3>😈 Bad Boy</h3>
+          <p>Spicy ginger soda with a splash of cola, lime wedges, and a dusting of chili powder — dangerously tasty.</p>
+        </li>
+        <li>
+          <h3>🔥 Bad Girl</h3>
+          <p>Fiery blood orange soda with cayenne and a rim of smoked paprika salt — fiercely irresistible.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="menu-category" aria-labelledby="food-title">
+      <h2 id="food-title">🍔 Erotic Summer Bites</h2>
+      <ul class="menu-items">
+        <li>
+          <h3>🥵 Moan Mac & Cheese Bites</h3>
+          <p>Deep-fried mac balls filled with creamy, cheesy goodness — hot, heavy, and made to melt in your mouth.</p>
+        </li>
+        <li>
+          <h3>🥓 Naughty Nachos</h3>
+          <p>Layered tortilla chips dripping in cheese, hot beef or chicken, jalapeños, sour cream, and spicy salsa — messy, loud, and satisfying.</p>
+        </li>
+        <li>
+          <h3>🥪 Between the Buns</h3>
+          <p>Thick grilled chicken sandwich (or plant-based) with “Unicorn Sauce” and juicy toppings — tight squeeze, big flavor.</p>
+        </li>
+        <li>
+          <h3>🥚 Double Yolkers</h3>
+          <p>Deviled eggs with spicy seasoning and a creamy filling — soft, firm, and devilishly addictive.</p>
+        </li>
+        <li>
+          <h3>🍤 Shrimpin' Ain’t Easy</h3>
+          <p>Crispy fried shrimp with sweet chili dip — juicy little bites with a lot of tail.</p>
+        </li>
+        <li>
+          <h3>🌽 Cob Tease</h3>
+          <p>Grilled elote (Mexican street corn) covered in spicy mayo, cheese, and chili powder — messy, sticky, and hot to the touch.</p>
+        </li>
+        <li>
+          <h3>🧄 Garlic Knotty Boys</h3>
+          <p>Buttery, twisted garlic knots dusted with parmesan and served with “saucy” dips — tie one on.</p>
+        </li>
+        <li>
+          <h3>🥔 Loaded with Lust Tater Tots</h3>
+          <p>Tots stacked with cheese sauce, bacon bits, sour cream, and green onions — thick and ready for action.</p>
+        </li>
+        <li>
+          <h3>🍞 Thicc Toast</h3>
+          <p>Texas toast loaded with honey butter and cinnamon sugar — served warm and dripping. Pairs well with soft moans.</p>
+        </li>
+        <li>
+          <h3>🥬 Buns Out Wrap</h3>
+          <p>Grilled chicken wrap with spicy ranch, shredded lettuce, and sliced cucumber — light, tight, and packed full.</p>
+        </li>
+        <li>
+          <h3>🥕 Size Matters Veggie Platter</h3>
+          <p>Assorted fresh-cut veggies with bold, creamy dipping sauce. Long cuts encouraged.</p>
+        </li>
+        <li>
+          <h3>🍌 Banana Cream Kink Pie</h3>
+          <p>Silky banana pudding layered with cookies, cream, and attitude. One bite and it gets messy.</p>
+        </li>
+        <li>
+          <h3>🍩 Hole Lotta Love</h3>
+          <p>Mini donuts dusted with sugar and paired with dipping sauces: chocolate, vanilla cream, and strawberry. Soft, warm, and easy to grab.</p>
+        </li>
+        <li>
+          <h3>🥨 Twisted & Salty</h3>
+          <p>Giant soft pretzel with beer cheese (non-alcoholic) and spicy mustard. Served extra hot and extra thicc.</p>
+        </li>
+        <li>
+          <h3>🍕 One Night Slice</h3>
+          <p>Large, foldable slices of pizza with greasy, gooey toppings. Fast, satisfying, and best consumed late at night.</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Vanilla Unicorn &mdash; All Rights Reserved &mdash; Must be 21+ to enter.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vanilla Unicorn | Events</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Montserrat&display=swap" rel="stylesheet" />
+  <style>
+    /* Reset and base styles */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Montserrat', sans-serif;
+    }
+    body {
+      background: #fff8f0;
+      color: #2a1a38;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.6;
+    }
+    a {
+      color: #ff2d86;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: #ff59ab;
+    }
+
+    /* Navigation */
+    nav {
+      background: #2a1a38;
+      color: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+    nav .container {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+    nav .logo {
+      font-family: 'Pacifico', cursive;
+      font-size: 1.8rem;
+      color: #ff2d86;
+      letter-spacing: 2px;
+      text-shadow: 0 0 6px #ff59ab;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+    nav ul li {
+      font-weight: 600;
+    }
+    nav ul li a {
+      font-size: 1rem;
+      color: #fff;
+    }
+    nav ul li a:hover,
+    nav ul li a[aria-current="page"] {
+      color: #ff59ab;
+      text-shadow: 0 0 5px #ff59ab;
+    }
+
+    /* Page Header */
+    header.page-header {
+      max-width: 1100px;
+      margin: 3rem auto 2rem;
+      padding: 0 1.5rem;
+      text-align: center;
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #ff2d86;
+      text-shadow: 0 0 7px #ff59ab;
+    }
+
+    /* Events container */
+    main.events-container {
+      max-width: 1100px;
+      margin: auto 1.5rem 4rem;
+    }
+
+    .event {
+      background: #fff;
+      box-shadow: 0 4px 12px rgba(42, 26, 56, 0.15);
+      border-radius: 15px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.8rem;
+      transition: box-shadow 0.3s ease;
+    }
+    .event:hover {
+      box-shadow: 0 6px 18px rgba(255, 45, 134, 0.5);
+    }
+    .event h3 {
+      font-family: 'Pacifico', cursive;
+      font-size: 2rem;
+      color: #ff2d86;
+      margin-bottom: 0.5rem;
+      text-shadow: 0 0 5px #ff59ab;
+    }
+    .event .date {
+      font-weight: 600;
+      color: #6e5970;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+    .event p {
+      font-size: 1.1rem;
+      color: #2a1a38;
+      line-height: 1.5;
+    }
+
+    /* Footer */
+    footer {
+      background: #2a1a38;
+      color: #fff;
+      padding: 1.5rem 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      box-shadow: inset 0 3px 10px rgba(255, 45, 134, 0.6);
+      margin-top: auto;
+    }
+
+    /* Responsive */
+    @media (max-width: 480px) {
+      header.page-header {
+        font-size: 2.4rem;
+      }
+      .event h3 {
+        font-size: 1.6rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <div class="logo">Vanilla Unicorn</div>
+      <ul>
+        <li><a href="VanillaUnicorn_Home.html">Home</a></li>
+        <li><a href="VanillaUnicorn_Menu.html">Menu</a></li>
+        <li><a href="VanillaUnicorn_Events.html" aria-current="page">Events</a></li>
+        <li><a href="VanillaUnicorn_About.html">About</a></li>
+        <li><a href="VanillaUnicorn_Booking.html">Booking</a></li>
+        <li><a href="VanillaUnicorn_Gallery.html">Gallery</a></li>
+        <li><a href="VanillaUnicorn_Contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-header" role="heading" aria-level="1">
+    Upcoming Events at Vanilla Unicorn
+  </header>
+
+  <main class="events-container" role="main">
+    <article class="event" tabindex="0">
+      <h3>🔥 Sensual Sundays</h3>
+      <p class="date">Every Sunday, 8 PM - 2 AM</p>
+      <p>Relax and unwind with sultry performances and drink specials that’ll tease and please. Expect sexy themes, special guests, and unforgettable nights.</p>
+    </article>
+
+    <article class="event" tabindex="0">
+      <h3>💃 Bikini Bash</h3>
+      <p class="date">June 30th, 9 PM till Late</p>
+      <p>Celebrate summer heat with our Bikini Bash! Hot dancers, tropical drinks, and a steamy atmosphere that’ll leave you breathless.</p>
+    </article>
+
+    <article class="event" tabindex="0">
+      <h3>🎶 Live DJ Nights</h3>
+      <p class="date">Fridays & Saturdays, 10 PM - 3 AM</p>
+      <p>Feel the beat with our resident DJs spinning sexy, sultry, and dance-worthy tracks all night long. The party doesn’t stop at Vanilla Unicorn.</p>
+    </article>
+
+    <article class="event" tabindex="0">
+      <h3>💋 Ladies’ Night</h3>
+      <p class="date">Every Thursday, 8 PM - Midnight</p>
+      <p>Special discounts and surprises for the ladies. Bring your girlfriends and enjoy a night of fun, flirtation, and fabulous performances.</p>
+    </article>
+
+    <article class="event" tabindex="0">
+      <h3>🌹 VIP Velvet Evenings</h3>
+      <p class="date">Monthly - Check Our Booking Page</p>
+      <p>Exclusive VIP nights with private performances, bottle service, and intimate vibes. Book ahead for a night you'll never forget.</p>
+    </article>
+  </main>
+
+  <footer>
+    &copy; 2025 Vanilla Unicorn &mdash; All Rights Reserved &mdash; Must be 21+ to enter.
+  </footer>
+</body>
+</html>
